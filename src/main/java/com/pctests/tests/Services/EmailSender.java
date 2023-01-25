@@ -14,7 +14,7 @@ import java.util.Properties;
 @Service
 public class EmailSender implements Serializable {
 
-    private JavaMailSender emailSender;
+    private final JavaMailSender emailSender;
 
     public EmailSender(JavaMailSender emailSender) {
         this.emailSender = emailSender;
@@ -28,8 +28,8 @@ public class EmailSender implements Serializable {
             mailSender.setHost("smtp.gmail.com");
             mailSender.setPort(587);
 
-            mailSender.setUsername("amjadkhaliliah1998@gmail.com");
-            mailSender.setPassword("181512@Aa");
+            mailSender.setUsername("Email");
+            mailSender.setPassword("Your Email Password");
 
             Properties props = mailSender.getJavaMailProperties();
             props.put("mail.transport.protocol", "smtp");
